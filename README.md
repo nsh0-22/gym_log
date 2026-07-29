@@ -1,24 +1,13 @@
-# README
+# Gym　Log
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリ概要
+Ruby学習用筋トレ記録アプリです。
 
-Things you may want to cover:
+## 使用技術
+* Ruby 3.3
+* Ruby on Rails 7.0
+* MySQL
+* Git / GitHub
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## メモ
+アウトプットに合わせて追記していきます。
