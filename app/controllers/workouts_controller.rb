@@ -1,5 +1,6 @@
 class WorkoutsController < ApplicationController
   def index
-    @workouts = Workout.all
+    params[:start_date]
+    @workouts = Workout.where(date: params[:start_date])
   end
 end
