@@ -1,7 +1,4 @@
-<h1>Workout一覧</h1>
-<% @workouts.each do |workout| %>
-    <p>
-    <%= workout.date %>
-    <%= workout.exercise.name %>
-    </p>
+<h1 class="page-title">Workout一覧</h1>
+<%= month_calendar do |date| %>
+  <%= date.day %>
 <% end %>
