@@ -1,0 +1,24 @@
+<h1>Workout登録</h1>
+
+<%= form_with model: @workout do |form| %>
+    <p>
+        種目<br>
+        <%= form.collection_select :exercise_id, @exercises, :id, :name %>
+    </p>
+    <p>
+        重量（kg）<br>
+        <%= form.number_field :weight %>
+    </p>
+    <p>
+        回数（回）<br>
+        <%= form.number_field :reps %>
+    </p>
+    <p>
+        セット数（回）<br>
+        <%= form.number_field :sets %>
+    </p>
+    <%= form.hidden_field :date, value: params[:date] %>
+
+    <%= form.submit "登録" %>
+
+<% end %>

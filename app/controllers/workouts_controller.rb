@@ -3,4 +3,26 @@ class WorkoutsController < ApplicationController
     params[:start_date]
     @workouts = Workout.where(date: params[:start_date])
   end
+
+  def new
+    @workout = Workout.new
+    @exercises = Exercise.all
+  end
+
+  def create
+    @workout = Workout.new(workout_params)
+    if @workout.save
+      p "保存成功"
+    else
+      p @workout.errors.full_messages
+    end
+
+  end
+
+  private
+  def workout_params
+    params.require(:workout).permit(:exercise_id, :weight, :reps, :sets, :date)
+  end
+
 end
+
