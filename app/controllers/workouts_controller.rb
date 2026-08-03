@@ -12,7 +12,7 @@ class WorkoutsController < ApplicationController
   def create
     @workout = Workout.new(workout_params)
     if @workout.save
-      p "保存成功"
+      redirect_to workouts_path(start_date: @workout.date)
     else
       p @workout.errors.full_messages
     end
