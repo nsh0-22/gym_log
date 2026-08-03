@@ -19,5 +19,7 @@
         </p>
     <% end %>
 
-    <%= link_to "＋ Workoutを追加", new_workout_path(date: params[:start_date]) %>
+    <%= link_to "＋ Workoutを追加", 
+    new_workout_path(date: params[:start_date]),
+    class: "add-workout-button" %>
 </div>

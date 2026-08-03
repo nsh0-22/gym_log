@@ -30,3 +30,22 @@
     text-align: center;
 }
 
+.add-workout-button {
+    color: whitesmoke;
+    background-color: red;
+    font-weight: bold;
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.add-workout-button:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.add-workout-button:active {
+    position: relative;
+    top: 3px;
+    box-shadow: none;
+}
