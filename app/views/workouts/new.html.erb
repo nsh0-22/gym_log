@@ -3,7 +3,7 @@
 <%= form_with model: @workout do |form| %>
     <p>
         種目<br>
-        <%= form.collection_select :exercise_id, @exercises, :id, :name %>
+        <%= form.collection_select :exercise_id, @exercises, :id, :name, { prompt: "種目を選択してください" } %>
     </p>
     <p>
         重量（kg）<br>
