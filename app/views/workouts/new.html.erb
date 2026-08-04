@@ -1,6 +1,10 @@
 <h1>Workout登録</h1>
 
-<%= form_with model: @workout do |form| %>
+<%= @workout.object_id %>
+<br>
+<%= @workout.errors.full_messages.inspect %>
+
+<%= form_with model: @workout, local: true do |form| %>
     <p>
         種目<br>
         <%= form.collection_select :exercise_id, @exercises, :id, :name, { prompt: "種目を選択してください" } %>
