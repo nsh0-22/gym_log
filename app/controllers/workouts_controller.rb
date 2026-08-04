@@ -15,8 +15,6 @@ class WorkoutsController < ApplicationController
       redirect_to workouts_path(start_date: @workout.date)
     else
       @exercises = Exercise.all
-      p @workout.object_id
-      p @workout.errors.full_messages
       render :new
     end
 
