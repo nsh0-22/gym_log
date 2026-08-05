@@ -10,6 +10,7 @@
         </ul>
     </div>
     <% end %>
+
         <p>
             種目<br>
             <%= form.collection_select :exercise_id, @exercises, :id, :name, { prompt: "種目を選択してください" } %>
@@ -25,6 +26,10 @@
         <p>
             セット数（回）<br>
             <%= form.number_field :sets %>
+        </p>
+        <p>
+            メモ<br>
+            <%= form.text_area :memo %>
         </p>
         <%= form.hidden_field :date, value: params[:date] %>
 

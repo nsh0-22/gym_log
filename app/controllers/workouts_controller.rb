@@ -12,7 +12,7 @@ class WorkoutsController < ApplicationController
   def create
     @workout = Workout.new(workout_params)
     if @workout.save
-      redirect_to workouts_path(start_date: @workout.date)
+      redirect_to workouts_path(start_date: @workout.date), notice: "登録できました！"
     else
       @exercises = Exercise.all
       render :new
@@ -22,7 +22,7 @@ class WorkoutsController < ApplicationController
 
   private
   def workout_params
-    params.require(:workout).permit(:exercise_id, :weight, :reps, :sets, :date)
+    params.require(:workout).permit(:exercise_id, :weight, :reps, :sets, :date, :memo)
   end
 
 end

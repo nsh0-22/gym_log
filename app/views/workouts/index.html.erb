@@ -15,8 +15,15 @@
             ×
             <%= workout.reps %>回
             ×
-            <%= workout.sets %>セット
+            <%= workout.sets %>セット<br>
+            <% if workout.memo.present? %>
+                今日のメモ：<%= workout.memo %>
+            <% end %>
         </p>
+    <% end %>
+
+    <% if flash[:notice] %>
+        <div class="alert alert-success"><%= notice %></div>
     <% end %>
 
     <%= link_to "＋ Workoutを追加", 
