@@ -64,3 +64,18 @@ body {
 .put-text {
     width: 400px;
 }
+
+.workout-popup {
+    background-color: pink;
+    position: fixed;
+    width: 800px;
+    height: 120px;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
