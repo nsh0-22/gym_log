@@ -1,7 +1,7 @@
-<div class="workout-form">
+<div class="workout-form" id="workout-form">
 <h1>Workout登録</h1>
 
-<%= form_with(model: @workout, local: true) do |form| %>
+<%= form_with(model: @workout) do |form| %>
     <% if @workout.errors.any? %>
     <div class="error-alert">
         <ul>
@@ -12,25 +12,32 @@
     </div>
     <% end %>
 
+    <% if flash[:notice] %>
+        <div class="popup">
+            <p><%= flash[:notice] %></p>
+        </div>
+    <% end %>
+
+
         <p>
             種目<br>
-            <%= form.collection_select :exercise_id, @exercises, :id, :name, { prompt: "種目を選択してください" } %>
+            <%= form.collection_select :exercise_id, @exercises, :id, :name, { prompt: "種目を選択してください" }, class: "put-event" %>
         </p>
         <p>
             重量（kg）<br>
-            <%= form.number_field :weight %>
+            <%= form.number_field :weight, class: "put-weight" %>
         </p>
         <p>
             回数（回）<br>
-            <%= form.number_field :reps %>
+            <%= form.number_field :reps, class: "put-reps" %>
         </p>
         <p>
             セット数（回）<br>
-            <%= form.number_field :sets %>
+            <%= form.number_field :sets, class: "put-sets" %>
         </p>
         <p>
             メモ<br>
-            <%= form.text_area :memo %>
+            <%= form.text_area :memo, class: "put-text"  %>
         </p>
         <%= form.hidden_field :date, value: params[:date] %>
 

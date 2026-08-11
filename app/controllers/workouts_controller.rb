@@ -12,7 +12,8 @@ class WorkoutsController < ApplicationController
   def create
     @workout = Workout.new(workout_params)
     if @workout.save
-      redirect_to workouts_path(start_date: @workout.date), notice: "登録できました！"
+      @exercises = Exercise.all
+      render format: :turbo_stream
     else
       @exercises = Exercise.all
       render :new

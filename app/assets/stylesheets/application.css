@@ -58,5 +58,9 @@ body {
 }
 
 .workout-form {
-    padding-left: 20px;
+    text-align: center;
+}
+
+.put-text {
+    width: 400px;
 }
