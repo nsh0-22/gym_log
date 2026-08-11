@@ -3,12 +3,21 @@
     <div class="workout-overlay"></div>
 
     <div class="workout-popup">
+        <button class="popup-close" onclick="closePopup()">×</button>
         <p>🎉 登録しました！🎉</p>
 
         <div class="popup-buttons">
-            <button>← トップに戻る</button>
-            <button>続けて登録 →</button>
+            <%= link_to "← トップに戻る", root_path, class: "popup-button" %>
+            <button onclick="closePopup()">続けて登録 →</button>
         </div>
+
     </div>
+
+    <script>
+        function closePopup() {
+            document.querySelector(".workout-popup").remove();
+            document.querySelector(".workout-overlay").remove();
+        }
+    </script>
   </template>
 </turbo-stream>
