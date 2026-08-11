@@ -16,7 +16,7 @@ class WorkoutsController < ApplicationController
       render format: :turbo_stream
     else
       @exercises = Exercise.all
-      render :new
+      render :new, formats: :turbo_stream
     end
 
   end

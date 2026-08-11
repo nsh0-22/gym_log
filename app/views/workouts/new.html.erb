@@ -2,23 +2,6 @@
 <h1>Workout登録</h1>
 
 <%= form_with(model: @workout) do |form| %>
-    <% if @workout.errors.any? %>
-    <div class="error-alert">
-        <ul>
-            <% @workout.errors.full_messages.each do |message| %>
-                <li class='error-message'><%= message %></li>
-            <% end %>
-        </ul>
-    </div>
-    <% end %>
-
-    <% if flash[:notice] %>
-        <div class="popup">
-            <p><%= flash[:notice] %></p>
-        </div>
-    <% end %>
-
-
         <p>
             種目<br>
             <%= form.collection_select :exercise_id, @exercises, :id, :name, { prompt: "種目を選択してください" }, class: "put-event" %>
@@ -44,3 +27,5 @@
         <%= form.submit "登録" %>
 <% end %>
 </div>
+
+<div id="error-area"></div>

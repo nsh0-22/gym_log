@@ -78,4 +78,22 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.workout-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.error-message {
+    text-align: center;
+    color: red;
+    font-size: 20px;
 }
