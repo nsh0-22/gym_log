@@ -1,7 +1,7 @@
 class WorkoutsController < ApplicationController
   def index
-    params[:start_date]
-    @workouts = Workout.where(date: params[:start_date])
+    date = params[:start_date] || Date.current
+    @workouts = Workout.where(date: date)
   end
 
   def new

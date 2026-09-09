@@ -1,0 +1,17 @@
+<h1>ログイン</h1>
+
+<%= form_with(url: login_path) do |form| %>
+  <div>
+    <%= form.label :name, 'ユーザー名', style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :password, 'パスワード', style: "display: block" %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div>
+    <%= form.submit 'ログイン' %>
+  </div>
+<% end %>
