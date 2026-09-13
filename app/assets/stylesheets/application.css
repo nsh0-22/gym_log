@@ -113,3 +113,13 @@ body {
     color: red;
     font-size: 20px;
 }
+
+.welcome h1{
+    text-align: center;
+    padding-top: 80px;
+}
+
+.welcome-actions {
+    text-align: center;
+    padding-top: 10px;
+}
