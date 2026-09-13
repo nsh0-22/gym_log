@@ -9,7 +9,7 @@ class SignupsController < ApplicationController
     )
 
     if user.save
-      redirect_to root_path
+      redirect_to workouts_path
     else
       render :new, status: :unprocessable_entity
     end
