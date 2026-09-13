@@ -9,7 +9,7 @@ class SignupsController < ApplicationController
     )
 
     if user.save
-      redirect_to workouts_path
+      redirect_to root_path, notice: '登録しました。ログインしてください'
     else
       render :new, status: :unprocessable_entity
     end

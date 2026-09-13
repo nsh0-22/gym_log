@@ -11,11 +11,11 @@
   </head>
 
   <body>
-    <%= link_to "新規登録", new_signup_path %>
-
     <% if current_user.present? %>
       <span class="btn btn-primary"><%= current_user.name %></span>
+      <%= button_to "ログアウト", logout_path, method: :post %>
     <% else %>
+      <%= link_to "新規登録", new_signup_path %>
       <%= link_to "ログイン", new_login_path %>
     <% end %>
     <%= yield %>
