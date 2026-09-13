@@ -1,7 +1,7 @@
 class WorkoutsController < ApplicationController
   def index
     date = params[:start_date] || Date.current
-    @workouts = Workout.where(date: date)
+    @workouts = current_user.workouts.where(date: date)
   end
 
   def new
@@ -11,6 +11,7 @@ class WorkoutsController < ApplicationController
 
   def create
     @workout = Workout.new(workout_params)
+    @workout.user = current_user
     if @workout.save
       @exercises = Exercise.all
       render format: :turbo_stream
