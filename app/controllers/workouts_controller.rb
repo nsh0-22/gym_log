@@ -5,7 +5,7 @@ class WorkoutsController < ApplicationController
   end
 
   def new
-    @workout = Workout.new
+    @workout = Workout.new(date: params[:date] || Date.current)
     @exercises = Exercise.all
   end
 

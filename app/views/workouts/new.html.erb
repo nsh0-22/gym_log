@@ -22,7 +22,7 @@
             メモ<br>
             <%= form.text_area :memo, class: "put-text"  %>
         </p>
-        <%= form.hidden_field :date, value: params[:date] %>
+        <%= form.hidden_field :date %>
 
         <%= form.submit "登録" %>
 <% end %>
