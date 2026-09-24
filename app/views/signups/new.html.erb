@@ -1,17 +1,19 @@
-<h1>新規登録</h1>
+<div class="auth-container">
+  <h1>新規登録</h1>
 
-<%= form_with(url: signup_path) do |form| %>
-  <div>
-    <%= form.label :name, 'ユーザー名', style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
+  <%= form_with(url: signup_path) do |form| %>
+    <div>
+      <%= form.label :name, 'ユーザー名', style: "display: block" %>
+      <%= form.text_field :name %>
+    </div>
 
-  <div>
-    <%= form.label :password, 'パスワード', style: "display: block" %>
-    <%= form.password_field :password %>
-  </div>
+    <div>
+      <%= form.label :password, 'パスワード', style: "display: block" %>
+      <%= form.password_field :password %>
+    </div>
 
-  <div>
-    <%= form.submit '新規登録' %>
-  </div>
-<% end %>
+    <div>
+      <%= form.submit '新規登録' %>
+    </div>
+  <% end %>
+</div>
