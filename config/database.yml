@@ -53,3 +53,5 @@ production:
   database: gym_log_production
   username: gym_log
   password: <%= ENV["GYM_LOG_DATABASE_PASSWORD"] %>
+  host: mysql-efse
+  port: 3306
