@@ -95,6 +95,12 @@ body {
     z-index: 10;
 }
 
+@media (max-width: 768px) {
+    .workout-popup {
+        width: 60%;
+    }
+}
+
 .popup-buttons {
     display: flex;
     justify-content: space-between;
