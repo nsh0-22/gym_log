@@ -73,6 +73,12 @@ body {
     width: 400px;
 }
 
+@media (max-width: 768px) {
+    .put-text {
+        width: 70%;
+    }
+}
+
 .workout-popup {
     background-color: pink;
     position: fixed;
