@@ -1,8 +1,9 @@
 class WorkoutsController < ApplicationController
   def index
-    date = params[:start_date] || Date.current
-    
-    @workouts = current_user.workouts.where(date: date)
+    @date = Date.parse(params[:start_date]) if params[:start_date]
+    @date ||= Date.current
+
+    @workouts = current_user.workouts.where(date: @date)
     @calendar_workouts = current_user.workouts
   end
 

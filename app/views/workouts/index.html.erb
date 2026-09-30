@@ -5,6 +5,7 @@
 
 <div class="workout-list">
     <h2 class="workout-title">今日のWorkout</h2>
+    <p><%= @date.strftime("%Y/%m/%d") %></p>
 
     <% @workouts.each do |workout| %>
         <p class="workout-item">
